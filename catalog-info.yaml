@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: clk588gvp-nodejs-gitops
+  description: This is GitOps manifest for clk588gvp-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: clk588gvp-nodejs
+    backstage.io/kubernetes-id: clk588gvp-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: clk588gvp-nodejs   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:clk588gvp-nodejs
